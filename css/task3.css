@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Microsoft YaHei','微软雅黑',sans-serif;
+    font-size:12px;
+    padding:20px;
+}
+main{
+    display:block;    
+    border:1px solid #999;
+    padding:20px;    
+    background-color:#eee;    
+    overflow: auto;/*让父元素的height自适应，为了让 #member被包含在内容区内*/ 
+}
+main article,figure{
+    padding:20px;
+    border:1px solid #999;
+    background-color:white;
+}
+main img{
+    width:80px;
+    height:80px;
+}
+
+
+#profile{
+    float:left;
+    width:160px;/*只要浮动，width一定要声明*/
+}
+#profile img{
+    float:left;
+    margin-right:20px;
+}
+#profile span{
+    font-size:14px;
+    font-weight:bold;
+}
+
+#member{
+    float:right;
+    width:80px;
+    padding-bottom:0;
+}
+#member img{
+    display:block;
+    margin-bottom:20px;
+}
+
+
+#info{
+    margin-left:220px;
+    margin-right:200px;
+    line-height:200%;
+}
+
+/*
+当“非float的元素”和“float的元素”在一起的时候,
+如果非float元素在先,那么float的元素将受到排斥。
+也就是说:
+如果你的html里有一大堆要浮动的元素时，
+把这些要浮动的元素放在所有元素的最前面就正常了
+*/
