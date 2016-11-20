@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#fff;
+}
+#container{
+    /*定位*/
+    position:absolute;/*巧妙水平垂直居中*/
+    top:50%;
+    margin-top:-100px;    
+    left:50%;
+    margin-left:-200px;
+    /*形状*/
+    width:400px;
+    height:200px;
+    /*颜色*/
+    background-color:#ccc;
+}
+#lcircle,#rcircle{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    background-color:#fc0;
+}
+#lcircle{
+    position:absolute;
+    top:-50px;
+    left:-50px;
+}
+#rcircle{
+    position:absolute;
+    bottom:-50px;
+    right:-50px;
+}
+
+写CSS跟画画差不多蛤蛤蛤蛤
+1.先画整体后改局部（先声明整体属性，后声明局部属性）
+
+
+1.定位（float或者position）
+2.画形状（先display然后width,height,）
+3.填充背景（background）
+4.在背景之上写字（font,text）
+5.交互动效
