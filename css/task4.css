@@ -18,18 +18,18 @@ body{
     /*颜色*/
     background-color:#ccc;
 }
-#lcircle,#rcircle{
+#left-top-circle,#right-bottom-circle{
     width:100px;
     height:100px;
-    border-radius:50px;
     background-color:#fc0;
 }
-#lcircle{
+#left-top-circle{
+    border-radius:0 0 50px 0;    
     position:absolute;
     top:-50px;
     left:-50px;
 }
-#rcircle{
+#right-bottom-circle{
     position:absolute;
     bottom:-50px;
     right:-50px;
