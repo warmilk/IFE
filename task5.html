@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task1</title>
+	<link rel="stylesheet" type="text/css" href="css/task5.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+	<header>
+		<a href="#"><img src="img/logo.png"></a>
+		<!-- <h1>网站一级标题</h1> -->
+		<nav>
+			<ul>
+				<li><a href="#">导航链接一</a></li>
+				<li><a href="#">导航链接二</a></li>	
+				<li><a href="#">导航链接三</a></li>
+				<li><a href="#">导航链接四</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- 主体开始 -->
+	<main>
+		<!-- 侧栏开始 -->
+		<aside>
+			<h4>这里以后是个侧栏，这是侧栏的标题</h4>
+
+			<form action="#" method="post">
+				<div>
+					<label class="tip">请输入邮箱地址</label>
+					<input type="text" name="email" placeholder="请输入">
+				</div>
+				<p>邮箱地址请按要求格式输入</p>
+
+				<div>
+					<label class="tip">请输入密码</label>
+					<input type="password" name="password" placeholder="请输入12位密码">
+				</div>
+
+				<div>
+					<label class="tip">请重复输入密码</label>
+					<input type="password" name="password" placeholder="请再次输入12位密码">
+				</div>
+				<p>密码请为6-16位英文数字</p>
+			</form>
+
+			<form action="#" method="post">
+				<div>
+					<label class="tip">性别</label>
+					<!--同一组的单选按钮，name 取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。-->
+					<!--value提交数据到服务器的值；checked默认被选中-->
+					<label><input type="radio" value="male" name="sex" checked="checked">男</label>
+					<label><input type="radio" value="female" name="sex">女</label>
+				</div>
+			</form>
+
+			<form action="#" method="post">	
+				<div>
+					<label class="tip">城市</label>
+					<select>
+						<optgroup label="中国">
+							<option value="guangdong">广东</option>
+							<option value="guangxi">广西</option>
+						</optgroup>
+						<optgroup label="外国">
+							<option value="meiguo">美国</option>
+							<option value="yidali">意大利</option>
+						</optgroup>
+					</select>
+				</div>
+			</form>
+
+			<form action="#" method="post">	
+				<div>
+					<label class="tip">爱好</label>
+					<label><input type="checkbox" name="hobby">运动</label>
+					<label><input type="checkbox" name="hobby">艺术</label>
+					<label><input type="checkbox" name="hobby">科学</label>
+				</div>
+			</form>
+
+			<form action="#" method="post">
+				<div>
+					<label class="tip">个人描述</label>
+					<textarea placeholder="这是一个多行输入框"></textarea>
+				</div>
+			</form>
+
+			<button type="submit" value="确认提交">确认提交</button>
+		</aside>
+
+		<!-- 文章一开始 -->
+		<article>
+			<h2>文章一级标题</h2>
+			<h4>文章二级标题</h4>
+			<span>文章作者</span><span>文章发表时间</span>
+			<p>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落<br>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://www.baidu.com">这里有个链接跳去百度</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落<br>
+				<img src="img/task1.jpg" width="300"><br>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://www.baidu.com" target="_blank">这里是个链接跳去百度，在新的标签页</a>这是一个很长很长的段落，这是一个很长很长的段落
+			</p>
+		</article>
+
+		<!-- 文章二开始 -->
+		<article>
+			<h2>另一篇文章一级标题</h2>
+			<h4>文章二级标题</h4>
+			<span>文章作者</span><span>文章发表时间</span>
+			<p>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落<br>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://www.baidu.com">这里有个链接跳去百度</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落<br>
+			</p>
+			<img src="img/task1.jpg" height="500">
+			<ul>
+				<li>项目列表一</li>
+				<li>项目列表二</li>
+				<li>项目列表三</li>
+			</ul>
+		</article>
+
+		<!-- 图片集开始 -->
+		<article>
+			<h2>图片</h2>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+			<figure>
+				<figcaption>好看的图片</figcaption>
+				<img src="img/task1.jpg">
+			</figure>
+		</article>
+		<!-- 文章三开始 -->
+		<article>
+			<h2>最后一篇文章一级标题</h2>
+			<h4>文章二级标题</h4>
+			<span>文章作者</span><span>文章发表时间</span>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+			<table>
+				<caption>下面是一个表格，这是caption默认text-align:center;啊</caption>
+				<thead><th>表头</th><th>表头</th><th>表头</th></thead>
+				<tbody>
+					<tr><td>表内单元格</td><td>表内单元格</td><td>操作</td></tr>
+					<tr><td>表内单元格</td><td>表内单元格</td><td>操作</td></tr>
+					<tr><td>表内单元格</td><td>表内单元格</td><td>操作</td></tr>
+					<tr><td>表内单元格</td><td>表内单元格</td><td>操作</td></tr>
+				</tbody>
+				<tfoot><tr><td>总计</td><td colspan="2">1000</td></tr></tfoot>
+			</table>
+		</article>
+	</main>
+	<!-- 足部开始 -->
+	<footer>
+		<address>版权所有@</address>
+	</footer>
+</body>
+</html>

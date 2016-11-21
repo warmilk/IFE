@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+	background-color:#dedede;
+	font-family: 'Microsoft YaHei','微软雅黑',sans-serif;
+}
+
+
+/*头部*//*--------------------------------------------------------------------------*/
+header{
+	height:60px;
+	background-color:#333333;
+	position:relative;
+}
+header a img{
+	float:left;/*浮动定位*/
+	height:50px;/*img的等比例缩放的话，只写height或者width就好啦*/
+ 	padding-left:45px;/*ul的padding-right为20+Li的padding-right的25，一共25 */
+}
+header nav ul{
+	position:absolute;/*绝对定位*/
+	top:20px;
+	right:20px;
+}
+
+header nav ul li{
+    /*text-align: center; */
+    /*width:60px; */
+    /*display:block; *//*如果不想要li的圆点的话，将li的默认的 display:list-item; 声明为 display:block; 覆盖就没圆点了*/
+    float:left;
+    padding-right:25px;
+	
+}
+
+header nav ul li a{
+    text-decoration:none;/*去掉默认的下划线 */
+    color:white;
+    font-size:12px;
+}
+header nav ul li a:hover{
+    color:grey;/*有a出现的地方就要记得紧随其后写hover*/
+}
+
+
+
+/* 主体 *//*--------------------------------------------------------------------------*/
+article{    
+    margin-top:30px;
+    margin-right:34%;
+    margin-bottom:30px;
+    margin-left:30px;
+    
+    padding:20px;
+    background:white;
+    box-shadow:1px 1px 3px #848484;
+}
+aside{
+    float:right;
+    width:350px;
+    margin-right:30px;
+    
+    padding:20px;
+    background:white;
+    box-shadow:1px 1px 3px #848484;
+}
+article h2{
+    padding-top:20px;
+    font-size:22px;
+}
+article h4{
+    padding-top:20px;
+    color:#69686E;
+}
+article span{
+    display:inline-block;
+    padding:10px 20px 0px 0px;
+    color:#69686E;
+    font-size:12px;
+}
+article p{
+    padding-top:10px;
+    padding-bottom:10px;
+    text-indent:2em; /*1em相当于一个字的大小*/
+    line-height:150%;
+}
+article a{
+    color:blue;
+}
+article a:hover{
+    color:gray;
+}
+article img{
+    height:240px;
+    padding:10px 0px 10px 0px;
+}
+/* 无序列表 */
+article ul li{
+    list-style-type:none;
+}
+/* 图片集 */
+article figure{
+    width:120px;
+    height:120px;
+    border:1px solid #bbb;
+    margin:20px;
+}
+article figure figcaption{
+    text-align:center;
+    padding:5px 0px;
+    font-size:14px;
+}
+article figure img{
+    height:80px;
+    padding:0px;
+    display:block;
+    margin:0 auto;
+}
+/* 有序列表 */
+article ol{
+    list-style-position:inside;
+    padding:20px;
+}
+/* 表 */
+article table,th,td{
+    border:1px solid #ccc;
+    padding:3px;
+}
+article table{
+    width:100%;
+    font-size:12px;
+    border-collapse:collapse;
+}
+article caption{
+    font-size:14px;
+    padding:5px;
+}
+article table thead th{  
+    color:white;
+    background-color:black;
+    text-align:left;
+}
+article table tfoot td{
+    background-color:#ccc;
+    font-weight:bold;
+}
+/* 侧栏 */
+aside h4{
+    padding:8px 16px;
+    border-left:3px solid #ccc;
+}
+/* 表单 */
+aside form{
+    font-size:14px;
+    margin:10px 0;
+}
+aside form div{
+    margin:10px 0;
+}
+aside form div .tip{
+    float:left;
+    width:35%;
+    text-align:right;
+    padding-right:10px;
+}
+aside form p{
+    /*巧妙左对齐*/
+    margin-left:35%;
+    padding-left:10px;
+    /*下外边距 */
+    margin-bottom:25px;
+    /*颜色*/
+    color:#A6A6A6;
+}
+aside form textarea{
+    width:auto;
+    height:auto;
+}
+/* 按钮 */
+aside button{
+    display:block;
+    /*形状 */
+    width:100%;
+    height:40px;    
+    border:none;/*清除默认的button难看的3D边框*/
+    border-radius: 8px;
+    /*颜色 */
+    font-size: 16px;
+    font-weight:bold;
+    color:white;
+    background-color:#3355D0;
+    /*交互*/
+    cursor:pointer;/*光标移动到按钮上变成pointer*/
+}
+aside button:active{
+    background-color:#333;
+}
+
+
+/* 足部 *//*--------------------------------------------------------------------------*/
+footer{
+    height:70px;
+	background-color:#333;
+    position:relative;
+}
+footer address{
+    position:absolute;/*快速水平垂直居中*/
+    left:48%;
+    top:40%;
+    /*非绝对定位情况下，一般使用margin:0 auto的方法来进行居中，但在绝对定位情况下，margin:0 auto会失效。 */
+    color:white;
+    font-size:12px;
+    font-style:normal;
+}
