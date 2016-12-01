@@ -1,0 +1,405 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#44565C;
+}
+.container{
+    font-family: 'Microsoft YaHei','微软雅黑',sans-serif;
+    font-size:14px;
+    width:980px;
+    background:#fff;
+    margin:0 auto;
+}
+
+/* 头部 */
+header{
+    margin:0 45px 35px;
+    font-size:13px;
+    height:60px;
+    border-bottom:2px solid #938E8B;
+}
+.ife_url{
+    display:inline-block;
+    width:110px;
+    height:60px;
+    background:#D55D5C;
+    color:#fff;
+    position:relative;
+}
+.ife_url a{
+    text-decoration:none;
+}
+.ife_url .ife_url_text{
+    display:inline-block;
+    color:#fff;
+    position:absolute;
+    bottom:5px;
+    left:6px;
+}
+.date{
+    float:right;
+    margin-top:40px;
+    color:#D55D5C;
+}
+
+/* 横格一 */
+.figure_one{
+  /*display:inline-block;*/      /*方案一*/
+    float:left;                  /*方案二*/ 
+    margin:0 45px;
+}
+    /*
+    横格一的布局有两种方案
+    方案一：display:inline-block和float:right;
+    方案二：float:left;和float:right;  
+    经过试验，选择方案一，
+    因为两个子元素都浮动的话，发现给父元素设置的margin-bottom无效。。
+    ？？？？？。。。？？？
+    【为什么？】
+    因为要让方案二的margin-bottom生效，
+    必须手动触发父元素的BFC特性（overflow:hidden;）
+    【overflow:hidden;与float】
+    父块没有设置指定的高宽，
+    当子块设置为浮动后，
+    原本包裹子块的父块的高度塌陷消失，
+    这时给父块设置overflow:hidden就能清楚浮动造成的影响，
+    使父块重新包裹子块。
+
+    【以下会自动生成BFC】
+      1.根元素
+      2.【position】为absolute或fixed
+      3.【float】不为none
+      4.【display】为inline-block, table-cell, table-caption, flex, inline-flex
+      5.【overflow】不为visible
+
+根元素或其它包含它的元素
+浮动                   (元素的 float 不为 none)
+绝对定位元素            (元素的 position 为 absolute 或 fixed)
+行内块 inline-blocks    (元素的 display: inline-block)
+表格单元格              (元素的 display: table-cell，HTML表格单元格默认属性)
+表格标题                (元素的 display: table-caption, HTML表格标题默认属性)
+overflow不为visible的元素
+弹性盒子 flex boxes     (元素的 display: flex 或 inline-flex)
+
+    CSS2.1 中只有 BFC 和 IFC, CSS3 中还增加了 GFC 和 FFC
+    FC----Formatting Context 
+    */
+.article_one{
+    float:right;
+    width:200px;
+    margin-right:45px;
+    border-top:2px solid #D55D5C;
+    padding-top:10px;
+}
+.article_one h1{
+    text-decoration:underline;
+    font-weight:normal;
+    font-size:16px;
+    line-height:140%;
+    margin-top:3px;
+}
+.article_one h1:first-letter{
+    font-size:150%;
+}
+.article_one .aside{
+    color:#818181;
+/*     font-style:italic; */                  /*方案一*/
+/*     font-size:11px;     */
+/*     line-height:90%; */
+    font:italic 11px/0.9 '微软雅黑';           /*方案二*/
+}/*font简写属性必须同时设置 font-size 和 font-family 属性值才能生效*/
+.article_one .number{
+    color:#74B86B;
+    margin-left:-20px;
+    font-size:116px;
+    font-weight:bold;
+    font-style:italic;   
+}
+.article_one .num{
+    font-size:53px;
+    color:#CA8290;
+}
+.article_one .CSS{
+    display:inline-block;
+    position:relative;
+    bottom:10px;
+}
+.article_one .CSS span{
+    color:#CA8290;
+}
+.article_one .css{
+    display:inline-block;
+    position:relative;
+    right:30px;
+}
+.article_one .css span{
+    font-size:10px;
+    color:#818181;
+}
+.section_one{
+    overflow:hidden;
+    margin-bottom:40px;
+}
+
+
+/* 横格二 */
+.article_what{
+    width:230px; 
+    margin-left:45px;
+    display:inline-block;
+}
+.article_what h1{
+    color:#519566;
+    font-size:20px;
+    text-decoration:underline;
+}
+.section_two .content{
+    color:#838383;
+    margin-top:10px;
+    font-size:12px;
+}
+.article_when{
+    width:200px;
+    display:inline-block;
+    margin-left:28px;
+}
+.article_when h1{
+    color:#D2994E;
+    font-size:20px;
+    text-decoration:underline;
+}
+.article_how{
+    display:inline-block;
+    vertical-align:top;
+    margin-left:28px;
+}
+.article_how h1{
+    color:#CC7681;
+    font-size:20px;
+    text-decoration:underline;
+}
+.article_how span{
+    line-height:200%;
+}
+.article_how aside{
+    margin-top:30px;
+}
+.article_how .content_num{
+    font-style:italic;
+    color:#CC7681;
+}
+.section_two{
+    margin-bottom:70px;
+}
+
+
+
+/* 横格三 */
+.article_two{
+    margin-left:45px;
+    width:415px;
+    float:left;
+}
+.title{
+    font-family:'黑体';
+    padding-bottom:10px;
+    border-bottom:2px solid #10466C;
+}
+.title_one{
+    font-size:72px;
+    color:#F5E329;
+    font-style:oblique;
+}
+.title_two{
+    font-size:40px;
+    color:#10466C;
+    letter-spacing:-1px;
+}
+.title_three{
+    color:#10466C;
+    font-size:32px;
+}
+.content{
+    color:#838383;
+    margin-top:20px;
+    font-size:12px;
+}
+.first_letter{
+    float:left;
+    color:#F5E329;
+    font-size:72px;
+    line-height:95%;
+    margin-right:10px;
+}
+.ins_img{
+    float:right;
+    width:165px;
+    height:290px;
+    margin:20px 10px 0px 20px;
+}
+.indent_p{
+    text-indent:2em;
+}
+.figure_two , .article_three{
+    float:right;
+    margin-right:45px;
+}
+.figure_two{
+    width:460px;
+    height:255px;
+    position:relative;
+}
+.bar{
+    width:458px;
+    height:60px;
+    position:absolute;
+    bottom:-2px;
+    background:rgba(0,0,0,0.3);/*最好不用opacity属性，
+                                 因为会将整个div内所有元素的透明度都改变*/
+}
+.bar_one{
+    float:left;
+    margin-left:40px;
+    margin-top:10px;
+    border-left:3px solid #73B06A;
+    padding-left:20px;
+}
+.bar_one span{
+    color:#fff;
+    font-size:28px;
+}
+.bar_two{
+    display:inline-block;
+    margin-top:30px;
+    margin-left:10px;
+}
+.bar_two span{
+    color:#73B06A;
+    font-style:italic;
+}
+
+.article_three{
+    width:460px;
+    height:320px;
+    background-color:#EEEED6;
+    margin-top:30px;
+    position:relative;
+}
+.triangle{
+    display:inline-block;
+    width:0px;
+    height:0px;
+    border-top:0px solid #EEEED6;
+    border-left:5px solid #EEEED6;
+    border-right:5px solid #EEEED6;
+    border-bottom:10px solid #11446C;
+}
+.li{
+    margin:20px 30px;
+}
+.li span{
+    font-family:'宋体';
+    color:#74756F;
+}
+.li_two{
+    font-size:12px;
+    font-style:italic;
+}
+.aside_l_box{
+    height:160px;
+    width:58%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:#D55D5C;
+}
+.aside_l_box span{
+    color:#fff;
+}
+.left{
+    float:left;
+    margin-left:18px;
+    margin-top:8px;
+}
+.left span{
+    font-size:110px;
+}
+.right{
+    float:right;
+    padding-left:10px;
+    width:160px;
+    margin-top:40px;
+    border-left:2px solid #fff;
+}
+.one,.two{
+    font-size:18px;
+    font-style:italic;
+    letter-spacing:-1px;
+}
+.three{
+    font-size:12px;
+}
+/* 难写的右下角引号段落。。 */
+.aside_r_box{
+  /*position:absolute; */          /*方案一*/
+  /*right:0; */
+  /*bottom:0; */
+  /*width:42%; */
+    float:right;                  /*方案二*/
+    width: 170px;
+    height: 130px;
+    margin-top:30px;
+    height:160px;
+}
+.mark_one,.mark_two{
+    font:72px '黑体';
+    color:#D55D5C;
+    height: 30px;
+}
+.mark_one{
+    float:left;
+    margin: -10px 5px 0 -40px;    
+}
+.mark_two{
+    float:right;
+}
+.aside_r_box p{
+    font:italic 12px '黑体';
+    color: #5a5b5b;
+}
+.section_three{
+    overflow:hidden; /*关于BFC的黑科技*/
+    margin-bottom:40px;
+}
+
+
+/* 足部 */
+footer{
+    clear:both;
+    height:60px;
+    border-top:1px solid #000;
+    margin:0px 45px;
+}
+.footer_ife_url{
+    float:right;
+}
+.footer_ife_url span{
+    color:#D55D5C;
+    font-size:12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
