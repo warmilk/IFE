@@ -1,0 +1,555 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    font-family: 'Microsoft YaHei','微软雅黑',sans-serif;
+}
+
+/* 头部 */
+header{
+    height:58px;
+    background:#fff;
+}
+.header_logo img{
+    width:30px;
+    vertical-align:middle;
+}
+.header_logo h1{
+    display:inline-block;
+    font-size:24px;
+    vertical-align: middle;
+    font-weight:500;
+}
+.header_logo{
+    float:left;
+    margin-left:60px;
+/*     margin-top:10px; */         /*方案一：将文本垂直居中的糟糕办法*/
+    line-height:58px;              /*方案二：优雅的将单行文本的垂直居中方法*/
+}
+header nav{
+    float:right;
+    margin-right:15px;
+}
+header li{
+    display:inline-block;
+}
+header a{
+    color:#818286;
+    text-decoration: none;
+    line-height:55px;         /*方案二：优雅的将单行文本的垂直居中方法*/
+    padding:15px;
+}
+.header_login img{
+    height:16px;
+    vertical-align: -3px;
+}
+.header_login span{
+    color:#E74E48;
+}
+header a:hover{
+    color:#E74E48;
+}
+header li:hover{
+    border-bottom:3px solid #E74E48;   
+}
+
+
+/* 主体 */
+/* banner */
+.banner{
+    height:690px;
+    background-image:url('../img/images/task7_banner.jpg');
+    background-size:100% auto;         /*先让width铺满视口，然后height自动以背景图片的比例等比缩放调整*/
+    background-repeat: no-repeat;    
+    
+    clear:both;
+    
+    position:relative;
+}
+.banner-warp{
+    color:#fff;
+}
+.banner_h1 h1{
+    font-size:60px;
+    font-weight:500;
+}
+.banner_h1{
+    margin-bottom:10px;
+}
+.banner_p p{
+    font-size:22px;
+}
+.banner_p{
+    margin-bottom:60px;
+}
+.banner button{
+    width:330px;
+    height:64px;
+    background:#E8504F;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+}
+.banner-warp{
+    position:absolute;      /*垂直居中：利用position:absolute; 和 显式声明height*/
+    left:10%;
+    top:50%;
+    height:280px;
+    margin-top:-140px;
+}
+/* brief */
+.brief-box{
+/*  display:inline-block;  */        /*方案一：会因为width:25%;然后因为html里盒子
+                                                 间有空格符而将第四个盒子挤到换行*/
+                            
+    float:left;                        /*方案二*/
+    width:25%;
+    text-align:center; 
+    /*text-align应该在块级元素处设置，也就是包含着img或者p的父元素div处设置！*/
+    /*直接给img或p设置taxt-align是无效的*/
+}                           
+.brief_img{
+    margin:45px 0 30px 0;
+}
+.brief_p{
+    padding:0 85px;
+    border-right:2px solid #BABABA;
+    margin-bottom:60px;
+}
+.brief_p p{
+    color:#717171;
+    font-size:15px;
+}
+.brief_p_4{
+    border-right:none;
+}
+/* title */
+.title{
+    clear:both;
+    height:360px;
+    background:#EDEDED;
+    text-align: center;               /*水平居中*/
+}
+.title_div h1{
+    font-size:48px;
+    color:#A2A2A2;
+    font-weight:500;
+    line-height: 300%;
+}
+.title_div{
+    padding-top:65px;
+}
+/* search */
+.search{
+    background-image: url(../img/images/task7_seach.jpg);
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    height:340px;
+/*  overflow:hidden;*/    /*解决子元素的margin-top传递给了父元素*/
+                          /*给父元素加个padding或border或overflow:hidden即可*/
+                          /*父元素的第一个子元素的上边距margin-top如果碰不到有效的border或者padding.
+                            就会不断一层一层的找自己 “领导”(父元素，祖先元素)的麻烦。
+                            只要给领导设置个有效的 border或者padding，
+                            就可以有效的管制这个目无领导的margin
+                            防止它越级，假传圣旨，把自己的margin当领导的margin执行。*/
+
+                          /*为了少出现这种要多写几行代码的事，
+                            在大盒子内有多个小盒子，小盒子间有间隔的话，
+                            还是用padding这种填充物来将它们隔开吧，margin看情况最好少用*/
+}
+.search_div1{
+/*  margin:50px 0;    */
+    padding:50px 0;
+    text-align: center;
+    color:#fff;
+}
+.search_div1 h1{
+    font-size:24px;
+    font-family:黑体;
+    font-weight:600;
+}
+.search_div1 hr{
+    width:35px;
+    height:3px;
+    border:none;
+    background-color:#fff;
+    margin:10px auto 20px auto;
+}
+.search_div1 p{
+    font-size:14px;
+}
+.search_div2{
+    text-align: center;
+}
+.search_div2_select,.search_div2_btn{
+    display:inline-block;
+    padding-right:30px;
+}
+.search_div2_select select{
+    width:240px;
+    height:40px;
+}
+.search_div2_btn button{
+    /*形状 */
+    width:240px;
+    height:40px;    
+    border:none;/*清除默认的button难看的3D边框*/
+    /*颜色 */
+    font-size: 16px;
+    color:white;
+    background-color:#BF4E48;
+    /*交互*/
+    cursor:pointer;/*光标移动到按钮上变成pointer*/
+}
+.search_div2_btn button:active{
+    bacground-color:#462B2E;
+}
+/* showOne */
+.showOne{
+    height:600px;
+    background:#F8F8F8;
+}
+.showOneBox{
+    padding-top:90px;
+    text-align: center;
+}
+.showOne_figure,.showOne_figureBig{
+    display: inline-block;
+    padding:20px;
+}
+.showOne_figure img{
+    display:block;
+    padding:10px;
+    border:2px solid #E8E8E8;
+}
+.showOne_figure h4{
+    color:#555555;
+    line-height: 200%;
+}
+.showOne_figure p{
+    color:#969696;
+    font-size: 14px;
+}
+.showOne_figureBig img{
+    padding:5px 10px 10px 10px;
+    border: 2px solid #E8E8E8;
+}
+.showOne_figureBig h4{
+    font-size:24px;
+    color:#555555;
+    line-height: 100%;
+}
+.showOne_figureBig p{
+    line-height: 200%;
+    color:#969696;
+    font-size:14px;
+}
+/* showTwo */
+.showTwo{
+    overflow: hidden;
+}
+.showTwo_box1_l-text,.showTwo_box1_r,.showTwo_box2_l,.showTwo_box2_m{
+    text-align: center;
+}
+.showTwo_box1{
+    height:628px;
+    overflow:hidden;
+}
+.showTwo_box1_l{
+    position: relative;
+}
+.showTwo_box1_l img{
+    width:70%;
+}
+.showTwo_box1_l-text{
+    color:#fff;
+    width:70%;
+    position:absolute;
+    top:150px;
+}
+.showTwo_box1_l-text h1{
+    font-size: 180px;
+    font-weight:500;
+    line-height: 100%;
+}
+.showTwo_box1_l-text h2{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 100%;
+}
+.showTwo_box1_l-text p{
+    font-size: 24px;
+    line-height: 150%;
+}
+.showTwo_box1_r{
+    float:right;
+    width:30%;
+    height:100%;
+}
+.showTwo_box1_r-text{
+    padding:160px 72px;
+}
+.showTwo_box1_r-text p{
+    padding-bottom:30px;
+}
+.showTwo_box1_r h4{
+    font-size: 20px;
+    font-family:幼圆;
+    line-height: 300%;
+}
+.showTwo_box1_r p{
+    color:#ABABAB;
+    line-height: 250%;
+    font-size:12px;
+}
+.showTwo_box1_r button{
+    width:110px;
+    height:35px;
+    border:1px solid #BF4E48;
+    font-size: 14px;
+    color:#BF4E48;
+    background-color:#fff;
+    cursor:pointer;
+}
+.showTwo_box1_r button:hover{
+    color:#fff;
+    background-color:#BF4E48;
+}
+.span1{
+    color: #888888;
+}
+.span2{
+    color: #EC4E41;
+    font-weight: 300;
+}
+
+.showTwo_box1_r{
+    width:30%;
+}
+.showTwo_box2_l,.showTwo_box2_m{
+    height:490px;
+    width:35%;
+}
+.showTwo_box2_l{
+    background:#E8504F;
+    color:#fff;
+}
+.showTwo_box2_l p,.showTwo_box2_m p{
+    font-size:22px;
+}
+.showTwo_box2_l hr,.showTwo_box2_m hr{
+    width: 35px;
+    height: 3px;
+    border: none;
+    background-color: #fff;
+    margin: 25px auto;
+}
+.showTwo_box2_m hr{
+    background-color:#AAA;
+}
+.showTwo_box2_l button,.showTwo_box2_m button{
+    width:180px;
+    height:45px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.showTwo_box2_l button{
+    color:#fff;
+    background-color:#E8504F;
+    border:1px solid #fff;
+}
+.showTwo_box2_l button:hover{
+    color:#E8504F;
+    background-color:#fff;
+}
+.showTwo_box2_m button{
+    color:#BF4E48;
+    background-color:#fff;
+    border:1px solid #BF4E48;
+}
+.showTwo_box2_m button:hover{
+    color:#fff;
+    background-color:#E8504F;
+}
+/* .showTwo_box2_l-content{ */          /*想达到垂直居中的目的，本来想的是加多层div包着里面的一大块内容
+                                        再用一些复杂的垂直居中技术。。。。算了吧，把最顶部的元素弄个
+                                        padding-top就完事了*/
+/*     position: absolute; */
+/* } */
+.showTwo_box2_l-content:first-child,.showTwo_box2_m-content:first-child{
+    padding-top:150px;
+}
+.showTwo_box2_r img{
+    width:30%;
+}
+.showTwo_box2_l,.showTwo_box2_m{
+    float:left;
+}
+/* joinUsTittle */
+.joinUsTittle{
+    height:300px;
+    text-align: center;
+}
+.joinUsTittleWrapper{
+    padding:100px 400px;
+}
+.joinUsTittle h4{
+    font-size:22px;    
+    font-weight: 500;
+}
+.joinUsTittle hr{
+    width: 35px;
+    height: 3px;
+    border: none;
+    background-color:#E65954;
+    margin: 10px auto;
+}
+.joinUsTittle p{
+    color:#AAA;
+    font-size: 15px;
+}
+/* joinUs */
+.joinUs_l{
+    display:inline-block;
+    width:290px;
+    margin-right: 70px;
+}
+.joinUs_r{
+    display:inline-block;
+}
+.joinUsWrapper{
+    padding:0 140px 130px 140px; 
+}
+.joinUs_l_cell{
+    clear:both;
+}
+.joinUs_l_cell h4{
+    color:#515F50;
+    font:normal normal 16px "黑体";
+    padding-bottom: 20px;
+}
+.joinUs_l_cell p{
+    color:#AEACAD;
+    font:normal normal 13px/1.8 "黑体";
+}
+.joinUs_l_cell button{
+    background-color: transparent;
+    border:none;
+    color:#AEACAD;
+    cursor:pointer;
+    float:right;
+    margin-bottom:30px;
+    outline:0;
+}
+.joinUs_l_cell button svg{
+    fill:#AEACAD;
+}
+a,input,button{ 
+    outline:none;       /*去掉button和a点击后出现的虚线框框*/
+}
+::-moz-focus-inner{
+    border:0px;         /*firefox有bug所以用私有属性来去除*/
+}
+.joinUs_r{
+    position:relative;
+    top:30px;
+}
+.joinUs_r_1 input{
+    width:310px;
+    height:45px;
+    margin:0 15px 15px 0;
+    background-color:#EDEDEF;
+    border:none;
+    text-indent: 1em;
+}
+.joinUs_r_3 textarea{
+    resize: none;
+    height:150px;
+    width: 640px;
+    background-color:#EDEDEF;
+    border:none;
+    text-indent: 1em;
+    line-height: 3;
+}
+.joinUs_r button{
+    width:640px;
+    height:45px;
+    border:none;
+    margin-top: 15px;
+    cursor:pointer;
+}
+/* .contactUs */
+.contactUs{
+    height:360px;
+    background-color:#33363F;
+    color:#fff;
+    text-align: center;
+}
+.contactUs1 h2{
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.contactUs p{
+    font:14px/1.5 '黑体';
+}
+.contactUsWrapper{
+    width:510px;
+    display: inline-block;
+}
+.contactUs1{
+    padding:80px 20px 30px 20px;
+}
+.contactUs2{
+    width:100%;
+    background:#666;
+}
+.contactUs2 input{
+    width:428px;
+    height:40px;
+    float:left;
+    font-size: 16px;
+    text-indent: 1em;
+}
+.contactUs2 button{
+    float:left;
+    width:80px;
+    height: 42px;
+    background: #717179;
+    border:none;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contactUs2 button:hover{
+    background:#E8504F;
+}
+.contactUsWrapper img{
+    padding:0 12px;
+    padding-top:30px;
+}
+
+
+/* 足部 */
+footer{
+    height:55px;
+    background:#30303A;
+    color:#fff;
+    font-size: 12px;
+}
+footer a{
+    text-decoration: none;
+    float:right;
+    margin-right: 100px;
+    color:#fff;
+    position: relative;
+    top:20px;
+}
+footer button:hover{
+    color:#E8504F;
+}
+footer span{
+    margin-left: 100px;
+    line-height: 55px;  
+}
