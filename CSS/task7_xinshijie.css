@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -6,10 +7,10 @@
     font-family: 'Microsoft YaHei','微软雅黑',sans-serif;
 }
 
+
 /* 头部 */
 header{
     height:58px;
-    background:#fff;
 }
 .header_logo img{
     width:30px;
@@ -92,6 +93,9 @@ header li:hover{
     font-size:28px;
     cursor:pointer;
 }
+.banner button:hover{
+    background-color: #f00;
+}
 .banner-warp{
     position:absolute;      /*垂直居中：利用position:absolute; 和 显式声明height*/
     left:10%;
@@ -143,7 +147,7 @@ header li:hover{
 }
 /* search */
 .search{
-    background-image: url(../img/images/task7_seach.jpg);
+    background-image: url(../img/images/task7_seach.jpg);   /*不建议用。。请直接用img？*/
     background-size:100% auto;
     background-repeat: no-repeat;
     height:340px;
@@ -160,7 +164,6 @@ header li:hover{
                             还是用padding这种填充物来将它们隔开吧，margin看情况最好少用*/
 }
 .search_div1{
-/*  margin:50px 0;    */
     padding:50px 0;
     text-align: center;
     color:#fff;
@@ -183,28 +186,80 @@ header li:hover{
 .search_div2{
     text-align: center;
 }
-.search_div2_select,.search_div2_btn{
-    display:inline-block;
-    padding-right:30px;
-}
-.search_div2_select select{
-    width:240px;
-    height:40px;
-}
-.search_div2_btn button{
+.search_div2 button{
     /*形状 */
     width:240px;
     height:40px;    
+    margin:0 10px;
     border:none;/*清除默认的button难看的3D边框*/
     /*颜色 */
     font-size: 16px;
-    color:white;
-    background-color:#BF4E48;
+    
     /*交互*/
     cursor:pointer;/*光标移动到按钮上变成pointer*/
 }
-.search_div2_btn button:active{
-    bacground-color:#462B2E;
+	/*绘制下拉菜单按钮右边的小icon开始*/
+.input-btn_icon{
+	display: inline-block;
+	width:22px;
+	height:22px;
+	background:#BE4B4A;
+}
+.input-btn_icon svg{
+	fill:#fff;
+	padding-top:6px;
+}/*绘制下拉菜单按钮右边的小icon结束*/
+.input-btn{
+    background: #fff;
+}
+.input-btn .input-btn_txt{
+    float:left;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #AAAAAA;
+}
+.input-btn .input-btn_icon{
+    float:right;
+    margin-right: 10px;
+}
+.submit-btn{
+    position: relative;
+    top:-5px;
+    color:white;
+    background-color:#BF4E48;
+}
+.submit-btn:hover{
+    background-color:#E31212;
+}
+.search_div3{
+    width:240px;
+}
+.search_div3 ul li{
+    display: block;
+    width:240px;
+    height:40px;
+    background:#E3E3E5;
+    line-height: 40px;
+}
+.search_div3 i{
+    color:#000;
+}
+.search_div3 ul li:hover{
+    background:#BF4E48;
+    color:#fff;
+}
+.guojia{
+/*     display:none; */
+    position:absolute;
+    left:158px;
+    z-index: 10;
+    text-indent: 1em;
+}
+.shengfen{
+    position: absolute;
+    z-index: 10;
+    left: 422px;
+    text-indent: 1em;
 }
 /* showOne */
 .showOne{
@@ -464,6 +519,12 @@ a,input,button{
     border:none;
     text-indent: 1em;
 }
+.joinUs_r_1 input:hover{
+    width:308px;
+    height:43px;
+    background: #fff;
+    border:1px solid #EDEDEF;
+}
 .joinUs_r_3 textarea{
     resize: none;
     height:150px;
@@ -473,12 +534,23 @@ a,input,button{
     text-indent: 1em;
     line-height: 3;
 }
+.joinUs_r_3 textarea:hover{
+    resize: none;
+    height:148px;
+    width: 638px;
+    border:1px solid #EDEDEF;
+    background:#fff;
+}
 .joinUs_r button{
     width:640px;
     height:45px;
     border:none;
     margin-top: 15px;
     cursor:pointer;
+}
+.joinUs_r button:hover{
+    background-color:#E8504F;
+    color:#fff;
 }
 /* .contactUs */
 .contactUs{
@@ -525,9 +597,17 @@ a,input,button{
 .contactUs2 button:hover{
     background:#E8504F;
 }
-.contactUsWrapper img{
-    padding:0 12px;
-    padding-top:30px;
+
+/* .iconfontMilk对应字体的缩放 */
+.contactUs i{
+    color:#fff;
+    font-size: 32px;
+    display: inline-block;
+    margin:10px;    
+}
+.contactUs i:hover{
+    color:#E8504F;
+    width: 100px;
 }
 
 
@@ -546,7 +626,7 @@ footer a{
     position: relative;
     top:20px;
 }
-footer button:hover{
+footer a:hover{
     color:#E8504F;
 }
 footer span{

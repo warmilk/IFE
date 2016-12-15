@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>新世界</title>
 	<link rel="stylesheet" type="text/css" href="css/task7_xinshijie.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_t0coo9gq2g25ipb9.css">
 </head>
 <body>
 	<div class="container">
@@ -16,7 +17,7 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="#" name="top">首页</a>
+						<a href="#" name="top">首页</a><!-- 实现back to top功能所插的的flag -->
 					</li>
 					<li>
 						<a href="#">最新活动</a>
@@ -102,36 +103,55 @@
 					<hr>
 					<p>每个城市都有不同的活动信息，请自主查询您所需要了解的城市</p>
 				</div>
-				<div class="search_div2">
-					<form>
-						<div class="search_div2_select">
-							<select>国家
-								<option value="中国">中国</option>
-								<option value="中国">外国</option>
-							</select>
-						</div>
-						<div class="search_div2_select">
-							<select>省份
-								<option value="北京市">北京市</option>	
-								<option value="天津市">天津市</option>
-								<option value="河北省">河北省</option>
-								<option value="陕西省">陕西省</option>
-								<option value="内蒙古自治区">内蒙古自治区</option>
-								<option value="辽宁省">辽宁省</option>
-							</select>
-						</div>
-						<div class="search_div2_select">
-							<select>城市
-								<option value="广州">广州</option>
-								<option value="深圳">深圳</option>
-								<option value="佛山">佛山</option>
-							</select>
-						</div>
-						<div class="search_div2_btn">
-							<button>搜&nbsp;&nbsp;&nbsp;索</button>
-						</div>
-					</form>
-				</div>
+				<!-- 3个下拉单选菜单+1个提交按钮开始 -->
+                <div class="search_div2">
+                	<button class="search_div2 input-btn" type="button">
+                		<span class="input-btn_txt">国家</span>
+                		<span class="input-btn_icon">
+                			<svg viewbox="0 0 10 10" width="16" height="16" aria-hidden="true" style="height: 16px; width: 16px;">
+                				<g>
+                					<path d="M8.716.217L5.002 4 1.285.218C.99-.072.514-.072.22.218c-.294.29-.294.76 0 1.052l4.25 4.512c.292.29.77.29 1.063 0L9.78 1.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.063 0z"></path>
+                				</g>
+                			</svg>
+                		</span>	
+                	</button>
+                	<button class="search_div2 input-btn" type="button">
+                		<span class="input-btn_txt">省份</span>
+                		<span class="input-btn_icon">
+                			<svg viewbox="0 0 10 10" width="16" height="16" aria-hidden="true" style="height: 16px; width: 16px;">
+                				<g>
+                					<path d="M8.716.217L5.002 4 1.285.218C.99-.072.514-.072.22.218c-.294.29-.294.76 0 1.052l4.25 4.512c.292.29.77.29 1.063 0L9.78 1.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.063 0z"></path>
+                				</g>
+                			</svg>
+                		</span>	
+                	</button>
+                	<button class="search_div2 input-btn" type="button">
+                		<span class="input-btn_txt">城市</span>
+                		<span class="input-btn_icon">
+                			<svg viewbox="0 0 10 10" width="16" height="16" aria-hidden="true" style="height: 16px; width: 16px;">
+                				<g>
+                					<path d="M8.716.217L5.002 4 1.285.218C.99-.072.514-.072.22.218c-.294.29-.294.76 0 1.052l4.25 4.512c.292.29.77.29 1.063 0L9.78 1.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.063 0z"></path>
+                				</g>
+                			</svg>
+                		</span>	
+                	</button>
+                	<button class="search_div2 submit-btn" type="submit">搜&nbsp;&nbsp;索</button>
+                </div>
+                <div class="search_div3">
+                	<ul class="search_div3 guojia">
+                	    <li><i class=" fa-ok"></i><span>中国</span></li>
+                	    <li><i class="icon-ok"></i><span>美国</span></li>
+                	</ul>
+                	<ul class="search_div3 shengfen">
+                	    <li>北京市</li>
+                	    <li>天津市</li>
+                	    <li>河北省</li>
+                	    <li>陕西省</li>
+                	    <li>内蒙古自治区</li>
+                	    <li>辽宁省</li>
+                	</ul>    
+                </div>          
+            	<!-- 3个下拉单选菜单+1个提交按钮结束 -->
 			</section>
 
 			<section class="showOne">
@@ -287,13 +307,13 @@
 							<button type="submit">提&nbsp;&nbsp;交</button>
 						</form>
 					</div>
-					<a href="#"><img src="img/images/task7_contactUs_40.jpg"></a>
-					<a href="#"><img src="img/images/task7_contactUs_42.jpg"></a>
-					<a href="#"><img src="img/images/task7_contactUs_44.jpg"></a>
-					<a href="#"><img src="img/images/task7_contactUs_46.jpg"></a>
+					<!-- 利用阿里妈妈自己造了种叫做iconfontMilk的字体 ，然后用了在线font-class引入css的方式引入-->
+					<a href="#"><i class="iconfontMilk SNSicon-unie61d"></i></a>
+					<a href="#"><i class="iconfontMilk SNSicon-qq"></i></a>
+					<a href="#"><i class="iconfontMilk SNSicon-twitter"></i></a>
+					<a href="#"><i class="iconfontMilk SNSicon-40planetearth"></i></a>
 				</div>
 			</section>
-
 		</main>
 
 		<footer>
