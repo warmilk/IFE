@@ -270,7 +270,8 @@ header li:hover{
     padding-top:90px;
     text-align: center;
 }
-.showOne_figure,.showOne_figureBig{
+.showOne_figure,
+.showOne_figureBig{
     display: inline-block;
     padding:20px;
 }
@@ -305,7 +306,10 @@ header li:hover{
 .showTwo{
     overflow: hidden;
 }
-.showTwo_box1_l-text,.showTwo_box1_r,.showTwo_box2_l,.showTwo_box2_m{
+.showTwo_box1_l-text,
+.showTwo_box1_r,
+.showTwo_box2_l,
+.showTwo_box2_m{
     text-align: center;
 }
 .showTwo_box1{
@@ -383,7 +387,8 @@ header li:hover{
 .showTwo_box1_r{
     width:30%;
 }
-.showTwo_box2_l,.showTwo_box2_m{
+.showTwo_box2_l,
+.showTwo_box2_m{
     height:490px;
     width:35%;
 }
@@ -391,10 +396,12 @@ header li:hover{
     background:#E8504F;
     color:#fff;
 }
-.showTwo_box2_l p,.showTwo_box2_m p{
+.showTwo_box2_l p,
+.showTwo_box2_m p{
     font-size:22px;
 }
-.showTwo_box2_l hr,.showTwo_box2_m hr{
+.showTwo_box2_l hr,
+.showTwo_box2_m hr{
     width: 35px;
     height: 3px;
     border: none;
@@ -404,7 +411,8 @@ header li:hover{
 .showTwo_box2_m hr{
     background-color:#AAA;
 }
-.showTwo_box2_l button,.showTwo_box2_m button{
+.showTwo_box2_l button,
+.showTwo_box2_m button{
     width:180px;
     height:45px;
     font-size: 20px;
@@ -433,13 +441,15 @@ header li:hover{
                                         padding-top就完事了*/
 /*     position: absolute; */
 /* } */
-.showTwo_box2_l-content:first-child,.showTwo_box2_m-content:first-child{
+.showTwo_box2_l-content:first-child,
+.showTwo_box2_m-content:first-child{
     padding-top:150px;
 }
 .showTwo_box2_r img{
     width:30%;
 }
-.showTwo_box2_l,.showTwo_box2_m{
+.showTwo_box2_l,
+.showTwo_box2_m{
     float:left;
 }
 /* joinUsTittle */
@@ -501,7 +511,9 @@ header li:hover{
 .joinUs_l_cell button svg{
     fill:#AEACAD;
 }
-a,input,button{ 
+a,
+input,
+button{ 
     outline:none;       /*去掉button和a点击后出现的虚线框框*/
 }
 ::-moz-focus-inner{
@@ -574,19 +586,23 @@ a,input,button{
     padding:80px 20px 30px 20px;
 }
 .contactUs2{
-    width:100%;
-    background:#666;
+    height: 42px;
+/*     background:#666; */
 }
 .contactUs2 input{
+    display: block;   /*input have no Default CSS Settings，所以最好显式声明，为了在不同浏览器内
+                         剩余的的css规则渲染一致*/
     width:428px;
     height:40px;
-    float:left;
     font-size: 16px;
     text-indent: 1em;
 }
 .contactUs2 button{
-    float:left;
-    width:80px;
+    display: block;   /*button have no Default CSS Settings*/
+    position: relative;
+    top:-42px;
+    left: 430px;
+    width:79px;
     height: 42px;
     background: #717179;
     border:none;
@@ -597,7 +613,9 @@ a,input,button{
 .contactUs2 button:hover{
     background:#E8504F;
 }
-
+.contactUs2 br{
+    clear:both;
+}
 /* .iconfontMilk对应字体的缩放 */
 .contactUs i{
     color:#fff;
