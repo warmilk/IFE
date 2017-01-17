@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task9_backstageManagement</title>
+	<link rel="stylesheet" type="text/css" href="css/task9_backstageManagement.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_ogy4r5czxplgcik9.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="header_right">
+				<div class="header_search">
+					<span><i class="bsIcon backstage-sousuo_sousuo"></i></span>
+					<input type="text" name="search">
+				</div>
+				<div class="login">
+					<i class="bsIcon backstage-yonghu"></i>
+					<span>登录</span>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="img/images/task9_logo_03.png">
+			</div>
+		</header>
+
+		<main>
+			<main>
+				<section class="breadcrumb">
+					<div class="breadcrumbWrapper">
+						<a href="#"><span>C站</span></a>
+						<span>/</span>
+						<a href="#"><span>个人报表</span></a>
+						<span>/</span>
+						<a href="#"><span>文件一</span></a>
+						<span>/</span>
+						<a href="#"><span>文档一</span></a>
+					</div>
+				</section>	
+
+				<section class="search">
+					<div class="searchWrapper">
+						<form>
+							<div class="searchItem search_1">
+								<span>查询项</span>
+								<select class="selectWidget">
+									<option>&nbsp;第一项</option>
+									<option>&nbsp;第二项</option>
+									<option>&nbsp;第三项</option>
+								</select>
+							</div>
+							<div class="searchItem search_2">
+								<img src="img/images/task9_huan.png">
+								<div class="search_2_buy">
+									<span>买方</span>
+									<select class="selectWidget">
+										<option>&nbsp;小A</option>
+										<option>&nbsp;小B</option>
+									</select>
+								</div>
+								<div class="search_2_sell">
+									<span>卖方</span>
+									<select class="selectWidget">
+										<option>&nbsp;小C</option>
+										<option>&nbsp;小D</option>
+									</select>
+								</div>
+							</div>
+							<div class="searchItem search_3">
+								<div class="search_3_zhs">
+									<span>总耗时</span>
+									<select class="selectWidget">
+										<option>&nbsp;8 天</option>
+										<option>&nbsp;10 天</option>
+										<option>&nbsp;12 天</option>
+									</select>
+								</div>
+								<div class="search_3_rq">
+									<span>日期</span>
+									<select class="selectWidget">
+										<option>&nbsp;2016-04-01</option>
+									</select>
+								</div>
+								<div class="search_3_cjx">
+									<span>成交项</span>
+									<select class="selectWidget">
+										<option>&nbsp;10 项</option>
+									</select>
+								</div>
+								<div class="search_3_rs">
+									<span>人数</span>
+									<select class="selectWidget">
+										<option>&nbsp;10 人</option>
+										<option>&nbsp;12 人</option>
+										<option>&nbsp;14 人</option>
+									</select>
+								</div>
+								
+							</div>
+							<div class="searchItem search_4">
+								<button class="btn">搜索</button>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				<section class="timeTable">
+					<div class="timeTableWrapper clearfix">
+						<div class="timeTableItem timeTableItem_arrow">
+							<i class="bsIcon backstage-p-zuo"></i>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>10:00 am</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1200</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>11:00 am</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1300</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>12:00 am</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1200</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>01:00 pm</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1400</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>02:00 pm</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1500</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_showBox">
+							<div class="timeTableItem_time">
+								<span>03:00 pm</span>
+							</div>
+							<div class="timeTableItem_price">
+								<i class="bsIcon backstage-renminbi"></i>
+								<span>1800</span>
+							</div>
+						</div>
+						<div class="timeTableItem timeTableItem_arrow">
+							<i class="bsIcon backstage-arrows-copy"></i>
+						</div>
+						<div class="timeTableItem timeTableItem_history">
+							<i class="bsIcon backstage-rili"></i>
+							<span>历史查询</span>
+						</div>
+					</div>
+				</section>
+
+				<section class="tj">
+					<h4>2016年4月份统计</h4>
+					<div class="tjWrapper">
+						<div class="tjItem tjItem_1">
+							<span>133311</span>
+							<span>成交量</span>
+							<div></div>
+						</div>
+						<div class="tjItem tjItem_2">
+							<span>133311</span>
+							<span>成交量</span>
+							<div></div>
+						</div>
+						<div class="tjItem tjItem_3">
+							<span>133311</span>
+							<span>成交量</span>
+							<div></div>
+						</div>
+						<div class="tjItem tjItem_4">
+							<span>133311</span>
+							<span>成交量</span>
+							<div></div>
+						</div>
+					</div>
+				</section>
+				<section class="xm">
+					<div class="xmWrapper">
+						<div class="widget tabbed">
+							<h4>第一组项目</h4>
+
+							<input name="tabbed" id="tabbed1" type="radio" checked>
+							<section>
+							  <h1 class="h1_1">
+							    <label for="tabbed1">项目一</label>
+							  </h1>
+							  <div>
+							    <table>
+							      <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+							      <tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td></tr>
+							      <tr><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td></tr>
+							      <tr><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td></tr>
+							      <tr><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td></tr>
+							      <tr><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td></tr>
+							    </table>
+							  </div>
+							</section>
+
+							<input name="tabbed" id="tabbed2" type="radio" checked>
+							<section>
+							  <h1>
+							    <label for="tabbed2">项目二</label>
+							  </h1>
+							  <div>
+							    <table>
+							      <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+							      <tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td></tr>
+							      <tr><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td></tr>
+							      <tr><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td></tr>
+							      <tr><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td></tr>
+							      <tr><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td></tr>
+							    </table>
+							  </div>
+							</section>
+
+							<input name="tabbed" id="tabbed3" type="radio">
+							<section>
+							  <h1>
+							    <label for="tabbed3">项目三</label>
+							  </h1>
+							  <div>
+							    <table>
+							      <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+							      <tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td></tr>
+							      <tr><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td></tr>
+							      <tr><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td></tr>
+							      <tr><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td></tr>
+							      <tr><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td></tr>
+							    </table>
+							   </div>
+							</section>
+
+							<input name="tabbed" id="tabbed4" type="radio">
+							<section>
+							  <h1>
+							    <label for="tabbed4">项目四</label>
+							  </h1>
+							  <div>
+							    <table>
+							      <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+							      <tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td></tr>
+							      <tr><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td></tr>
+							      <tr><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td></tr>
+							      <tr><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td></tr>
+							      <tr><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td></tr>
+							    </table>
+							  </div>
+							</section>
+
+							<input name="tabbed" id="tabbed5" type="radio">
+							<section>
+							  <h1>
+							    <label for="tabbed5">项目五</label>
+							  </h1>
+							  <div>
+							    <table>
+							      <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+							      <tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td></tr>
+							      <tr><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td><td>购买材料四</td></tr>
+							      <tr><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td><td>购买材料六</td></tr>
+							      <tr><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td><td>购买材料十三</td></tr>
+							      <tr><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td><td>购买材料二十</td></tr>
+							    </table>
+							  </div>
+							</section>
+
+						</div>
+						<div class="widget dyzxmSearch">
+							<h4>第一组项目</h4>
+							<form>
+								<div class="widget_search_1">
+									<label for="xmTitle">标题</label>
+									<div>
+										<input type="text" name="title" id="xmTitle" placeholder="项目报表三">
+									</div>
+								</div>
+								<div class="widget_search_2">
+									<div class="widget_search_2_l">
+										<label for="xmPrice">价格</label>
+										<div>
+											<i class="bsIcon backstage-renminbi"></i>
+											<input type="text" name="xmPrice" id="xmPrice" placeholder="158">
+										</div>
+									</div>
+									<div class="widget_search_2_r">
+										<label for="xmManager">负责人</label>
+										<div>
+											<input type="text" name="xmManager" id="xmManager" placeholder="小A">
+										</div>
+									</div>
+								</div>
+								<div class="widget_search_3">
+									<label for="xmDescribe">详细描述</label>
+									<div>
+										<textarea placeholder="该项目目前负责人是..."></textarea>
+									</div>
+								</div>
+								<div class="widget_search_4">
+									<input type="checkbox" name="protocol" id="protocol">
+									<label for="protocol">遵守保密协议</label>
+									<button class="btn">搜索</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="etc">
+					<div class="widget rl">
+						<h4>日历</h4>
+						<div class="rl_1">
+							<div>
+								<select class="selectWidget year">
+									<option>&nbsp;2016年</option>
+									<option>&nbsp;2017年</option>
+									<option>&nbsp;2014年</option>
+								</select>
+								<i class="bsIcon backstage-xiangxiajiantou"></i>
+							</div>
+							<div>
+								<select class="selectWidget month">
+									<option>&nbsp;1月</option>
+									<option>&nbsp;2月</option>
+									<option>&nbsp;3月</option>
+									<option>&nbsp;4月</option>
+									<option>&nbsp;5月</option>
+									<option>&nbsp;6月</option>
+									<option>&nbsp;7月</option>
+									<option>&nbsp;8月</option>
+									<option>&nbsp;9月</option>
+									<option>&nbsp;10月</option>
+									<option>&nbsp;11月</option>
+									<option>&nbsp;12月</option>
+								</select>
+								<i class="bsIcon backstage-xiangxiajiantou"></i>
+							</div>
+							<div>
+								<select class="selectWidget day">
+									<option>&nbsp;标注日期</option>
+									<option>&nbsp;不标注日期</option>
+								</select>
+								<i class="bsIcon backstage-xiangxiajiantou"></i>
+							</div>
+							<div>
+								<button><span>返回今天</span></button>
+							</div>
+						</div>
+						<div class="rl_2">
+							<table>
+								<thead>
+									<tr>
+										<th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td><td></td><td></td><td></td><td><span>1</span><span class="jr">愚人节</span></td><td><span>2</span><span>廿五</span></td><td><span>3</span><span>廿六</span></td>
+									</tr>
+									<tr>
+										<td><span>4</span><span>廿七</span></td><td><span>5</span><span class="jr">清明</span></td><td><span>6</span><span>廿九</span><td><span>7</span><span>三月</span></td></td><td><span>8</span><span>初二</span></td><td><span>9</span><span>初三</span></td><td><span>10</span><span>初四</span></td>
+									</tr>
+									<tr>
+										<td><span>11</span><span>初五</span></td><td><span>12</span><span>初六</span></td><td><span>13</span><span>初七</span></td><td><span>14</span><span>初八</span></td><td><span>15</span><span>初九</span></td><td><span>16</span><span>初十</span></td><td><span>17</span><span>十一</span></td>
+									</tr>
+									<tr>
+										<td><span>18</span><span>十二</span></td><td><span>19</span><span>十三</span></td><td><span>20</span><span>十四</span></td><td><span>21</span><span>十五</span></td><td><span>22</span><span>十六</span></td><td><span>23</span><span>十七</span></td><td><span>24</span><span>十八</span></td>
+									</tr>
+									<tr>
+										<td><span>25</span><span>十九</span></td><td><span>26</span><span>廿十</span></td><td><span>27</span><span>廿一</span></td><td><span>28</span><span>廿二</span></td><td><span>29</span><span>廿三</span></td><td><span>30</span><span>廿四</span></td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="widget qchyppb">
+						<h4>汽车行业品牌榜</h4>
+						<div class="qchyppb_table">
+							<table>
+								<thead>
+									<tr>
+										<th>排名</th><th>品牌</th><th>搜索指数</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td><td>大众</td><td><span>48912001</span><div class="dibu"><div class="dz"></div></div></td>
+									</tr>
+									<tr>
+										<td>2</td><td>丰田</td><td><span>48912001</span><div class="dibu"><div class="ft"></div></div></td>
+									</tr>
+									<tr>
+										<td>3</td><td>奥迪</td><td><span>48912001</span><div class="dibu"><div class="ad"></div></div></td>
+									</tr>
+									<tr>
+										<td>4</td><td>本田</td><td><span>48912001</span><div class="dibu"><div class="No4 bt"></div></div></td>
+									</tr>
+									<tr>
+										<td>5</td><td>福特</td><td><span>48912001</span><div class="dibu"><div class="No4 fute"></div></div></td>
+									</tr>
+									<tr>
+										<td>6</td><td>宝马</td><td><span>48912001</span><div class="dibu"><div class="No4 bm"></div></div></td>
+									</tr>
+									<tr>
+										<td>7</td><td>现代</td><td><span>48912001</span><div class="dibu"><div class="No4 xd"></div></div></td>
+									</tr>
+									<tr>
+										<td>8</td><td>起亚</td><td><span>48912001</span><div class="dibu"><div class="No4 qy"></div></div></td>
+									</tr>
+									<tr>
+										<td>9</td><td>奔驰</td><td><span>48912001</span><div class="dibu"><div class="No4 bc"></div></div></td>
+									</tr>
+									<tr>
+										<td>10</td><td>别克</td><td><span>48912001</span><div class="dibu"><div class="No4 bk"></div></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<aside>
+				<div class="userInfo1">
+					<div class="userInfo_headPortrait userInfo_headPortrait1">
+						<div class="userInfo_headPortrait userInfo_headPortrait2">
+							<div class="userInfo_headPortrait userInfo_headPortrait3">
+							</div>
+						</div>
+					</div>
+					<div class="userInfo_name">
+						<span>ABC123</span>
+					</div>
+				</div>
+				<div class="userInfo2">
+					<div class="userInfo_favorite">
+							<span>100</span>
+							<span>收藏</span>
+						</div>
+						<div class="line"></div>
+						<div class="userInfo_fans">
+							<span>313</span>
+							<span>粉丝</span>
+						</div>
+				</div>
+				<div class="menuItemWrapper grbb">
+					<div class="menuItem grbb_title">
+						<i class="bsIcon backstage-qianbao"></i><span>个人报表</span>
+					</div>
+					<div class="grbb_folder grbb_folder1">
+						<i class="bsIcon backstage-arrows-copy"></i>
+						<span><i class="bsIcon backstage-file"></i>文件一</span>
+					</div>
+					<div class="grbb_folder">
+						<i class="bsIcon backstage-2"></i>
+						<span><i class="bsIcon backstage-file"></i>文件二</span>
+					</div>
+					<div class="grbb_file">
+						<span><i class="bsIcon backstage-wendang"></i>文档1</span>
+					</div>
+					<div class="grbb_file">
+						<span><i class="bsIcon backstage-wendang"></i>文档2</span>
+					</div>
+					<div class="grbb_folder">
+						<i class="bsIcon backstage-arrows-copy"></i>
+						<span><i class="bsIcon backstage-file"></i>文件三</span>
+					</div>
+				</div>
+				<div class="menuItemWrapper">
+					<div class="menuItem">
+						<i class="bsIcon backstage-star"></i><span>个人收藏</span>
+					</div>
+				</div>
+				<div class="menuItemWrapper">
+					<div class="menuItem">
+						<i class="bsIcon backstage-iconcardshare"></i><span>我的分享</span>
+					</div>
+				</div>
+				<div class="menuItemWrapper">
+					<div class="menuItem">
+						<i class="bsIcon backstage-star"></i><span>图库</span>
+					</div>
+				</div>
+				<div class="menuItemWrapper">
+					<div class="menuItem">
+						<i class="bsIcon backstage-star"></i><span>成长记录</span>
+					</div>
+				</div>
+				<div class="menuItemWrapper">
+					<div class="menuItem">
+						<i class="bsIcon backstage-zhanghuguanli"></i><span>账户信息</span>
+					</div>
+				</div>
+			</aside>
+		</main>
+	</div>
+</body>
+</html>
+
+

@@ -394,6 +394,49 @@ footer{
 
 
 
+/*父元素:after + content:''; 清除浮动终极黑科技进化史*/
+
+
+
+/*终极版一*/
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+} 
+.clearfix{*zoom:1;}
+
+
+
+/*终极版二*/
+.clearfix:after { 
+    content:"200B"; 
+    display:block; 
+    height:0; 
+    clear:both; 
+} 
+.clearfix {*zoom:1;}/*IE/7/6
+解释下:content:”200B”;这个参数，
+Unicode字符里有一个“零宽度空格”，
+即 U+200B，代替原来的“.”，
+而且不用再使用visibility:hidden
+可以缩减代码量
+
+
+/*终极版三*/
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{
+    clear:both;
+} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/ 
+}
 
 
 

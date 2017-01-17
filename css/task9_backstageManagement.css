@@ -1,0 +1,825 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    font-family: 'Microsoft YaHei','微软雅黑',sans-serif;
+    font-size: 12px;
+}
+
+/*头部*/
+header{
+	height:55px;
+    background-color:#2189C0;
+}
+.logo{
+    line-height:55px;
+}
+.logo img{
+    margin-left:50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.header_right{
+    float:right;
+    margin-right:90px;   
+    line-height: 53px;
+}
+.header_search{
+    display:inline-block;    
+    padding-right: 20px;
+}
+.header_search input{
+    height:28px;
+    width:300px;
+    line-height: 28px;
+    border-radius: 200px;
+    border:none;
+    text-indent: 3em;
+}
+.header_search span{
+    position: relative;
+    left:34px;
+    cursor: pointer;
+}
+.header_search i{
+    vertical-align: middle;
+    color:#ABABAB;
+}
+.login{
+    display: inline-block;
+    color:#fff;
+    cursor:pointer;
+}
+
+
+
+/* 主体 */
+main{
+    height:1210px;
+}
+/* 左边侧栏 */
+aside{
+    float:left;
+    width:20%;
+    height:100%;
+    color: #68778C;
+    background-color:#2B2E3D;
+}
+.userInfo1{
+    margin-left: 17%;
+    margin-top: 8%;
+}
+.userInfo_headPortrait{
+    display: inline-block;
+    border-radius: 100px;    
+}
+.userInfo_headPortrait1{
+    width:60px;
+    height:60px;
+    background:#B9BABE;
+    position:relative;
+}
+.userInfo_headPortrait2{
+    height:56px;
+    width:56px;
+    background:#2B2E3D;
+    position: absolute;
+    top:2px;
+    left: 2px;
+    position: relative;
+}
+.userInfo_headPortrait3{
+    height:48px;
+    width:48px;
+    background:#fff;
+    position: absolute;
+    top:4px;
+    left: 4px;
+}
+.userInfo_name{
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+
+.userInfo2{
+    font-size:14px;
+    text-align: center;
+    margin: 20px;
+}
+.userInfo_favorite{
+    display: inline-block;
+    padding-right: 35px;
+}
+.userInfo_favorite span,
+.userInfo_fans span{
+    display: block;  
+}
+.userInfo_favorite span:hover,
+.userInfo_fans span:hover{
+    cursor:pointer;
+}
+.userInfo_favorite:hover,
+.userInfo_fans:hover{
+    color:#fff;
+}
+.userInfo_fans{
+    padding-left: 35px;
+    display: inline-block;
+}
+.userInfo2 .line{
+    display: inline-block;
+    height:30px;
+    background:#323546;
+    width:2px;
+}
+
+.menuItemWrapper{
+    padding-left: 17%;
+}
+.menuItemWrapper:hover{
+    background: #383E4E;
+}
+.menuItem{
+    height: 45px;
+    line-height: 45px;
+}
+.menuItem:hover{
+    color:#fff;
+    cursor:pointer;
+}
+.menuItem span{
+    padding-left: 10px;
+}
+.grbb{
+    overflow: hidden;
+}
+.grbb_folder,
+.grbb_file{
+    margin:12px 0px 12px 30px;
+}
+.grbb_file{
+    padding-left: 28px;
+}
+.grbb_folder1{
+    margin-top: 0;
+}
+.grbb_folder:hover,
+.grbb_file:hover{
+    cursor: pointer;
+    color:#fff;
+}
+
+
+
+
+
+
+
+/* 右边一大块 */
+main main{
+    float:right;
+    width:80%;
+    background:#EDEDED;
+}
+/* 面包屑 */
+.breadcrumb{
+    height:30px;
+    background:#fff;
+    line-height: 30px;
+    color:#AAA;
+}
+.breadcrumbWrapper{
+    padding-left: 20px;
+}
+.breadcrumb a{
+    text-decoration: none;
+    color:#AAA;
+    padding:0 5px 0 5px;
+}
+.breadcrumb a:hover{
+    color:#2189ff;
+}
+/* search表单 */
+.search{
+    text-align: center;
+}
+.searchWrapper{
+    display: inline-block; /*触发BFC特性解决内部子元素浮动导致的高度坍塌，
+                            并且可以轻松实现(.searchWrapper的水平居中)，给父元素(.search)设置text-align:center*/
+    width:890px;
+    border:1px solid #ddd;
+    background:#fff;
+    padding:15px 0 15px 0;
+    margin-top: 15px;
+}
+.searchItem{
+    padding-left: 30px;
+}
+.selectWidget{
+    height:26px;
+    font-size: 12px;
+     /*清除默认样式*/
+     appearance:none;
+     -moz-appearance:none;
+     -webkit-appearance:none;
+    /*复写Chrome和Firefox里面的边框*/
+     border:1px solid #ccc;
+    
+}
+.selectWidget:hover{
+    cursor:pointer;
+    border-color: #2189ff;
+}
+.searchItem span{
+    padding-right: 15px;
+    color: #999;
+}
+.search_1{
+    float:left;
+}
+.search_1 select{
+    width:70px;
+}
+.search_2{
+    width:192px;
+    float:left;
+}
+.search_2 select{
+    width:120px;
+}
+.search_2 img{
+    float:right;
+    margin-top:10px;
+}
+.search_2_sell{
+    padding-top: 5px;
+}
+.search_3{
+    width:305px;
+    float:left;
+}
+.search_3_rq select,
+.search_3_cjx select{
+    width:120px;
+}
+.search_3_zhs,
+.search_3_cjx{
+    float:right;
+}
+.search_3_rs,
+.search_3_cjx{
+    padding-top:5px;
+}
+.search_3_zhs select,
+.search_3_rs select{
+    width:70px;
+}
+.search_4 button{
+    display: inline-block;
+}
+.btn{
+    border:none;
+    width:50px;
+    height:25px;
+    background:#398AC2;
+    color:#fff;
+    vertical-align:-20px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+/* timetable */
+.timeTable{
+    padding-top: 10px;
+    display: table;
+    margin:0 auto;
+}
+.timeTableItem{
+    border:1px solid #ddd;
+    height:60px;
+    float:left;
+/*     display: inline-block; */
+    background:#fff;
+    margin:0 2px 0 2px;
+    text-align: center;
+}
+.timeTableItem_arrow{
+    width:32px;
+}
+.timeTableItem_arrow:hover{
+    background:#2189C0;
+    color: #fff;
+}
+.timeTableItem_showBox{
+    width:110px;
+    box-sizing: border-box;
+}
+.timeTableItem_history{
+    width:130px;
+}
+.timeTableItem_arrow i{
+    line-height: 60px;
+}
+.timeTableItem_price i{
+    color: #AEAEAE;
+    font-size: 24px;
+    margin-right: -8px;
+    vertical-align: bottom;
+}
+.timeTableItem_price span{
+    font-size: 22px;
+    color: #ED6500;
+}
+.timeTableItem_time{
+    line-height: 24px;
+}
+.timeTableItem_history i{
+    font-size: 30px;
+    color: #398AC2;
+    line-height: 60px;
+    vertical-align: middle;
+}
+.timeTableItem_history span{
+    padding-left:5px;
+}
+.timeTableItem:hover{
+    cursor: pointer;
+}
+.timeTableItem_showBox:hover{
+    border-top: 3px solid #2189C0;
+}
+
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{
+    clear:both;
+} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/ 
+}
+/* 2016年4月份统计tj */
+.tj{
+    display: table;               
+    border-collapse:separate;  
+    border-spacing:30px 10px;
+    /*方案一：爷爷---display:table;
+                    border-collapse:seperate;
+                    border-spacing:水平 垂直;
+             父亲---displsy:table-row;
+             儿子---display:table-cell;
+    */
+    margin:0 auto;
+    margin-top: 15px;
+}
+.tjWrapper{
+    display: table-row;
+}
+.tjItem{
+    box-sizing: border-box;
+    height:70px;
+    width: 200px;
+    background: #fff;
+    padding: 15px;
+    border:1px solid #ddd;
+    display: table-cell;
+/*     display: inline-block; */               /*方案二：inline-block*/
+/*     padding: 3px 13px 10px 13px; */
+    
+}
+.tj h4{
+    font-weight: 500;
+}
+.tjItem span:last-of-type{
+    display: block;
+    color: #B0B0B0;
+    font-size: 12px;
+}
+.tjItem div{
+    width:60px;
+    height: 45px;
+    float: right;
+    margin-top: -37px;
+}
+.tjItem_1{
+    border-left: 3px solid #43B29F;    
+}
+.tjItem_1 div{
+    background:#43B29F;   
+}
+.tjItem_2{
+    border-left: 3px solid #398AC1;
+}
+.tjItem_2 div{
+    background:#398AC1;
+}
+.tjItem_3{
+    border-left: 3px solid #CE4936;
+}
+.tjItem_3 div{
+    background: #CE4936;
+}
+.tjItem_4{
+    border-left: 3px solid #E1CD46;
+}
+.tjItem_4 div{
+    background: #E1CD46;
+}
+
+
+
+
+
+/* .widget们的公共规则 */
+.widget{
+    height: 355px;
+    background:#fff;
+    display: inline-block;
+    vertical-align: top;
+    border:1px solid #D1D2D6;
+    border-radius: 8px;
+}
+.widget h4{
+    padding-left: 1.5em;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    color: #B5B5B5;
+    background: #F4F5F7;
+    display: block;
+    border-bottom: 1px solid #E7E8EC;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.tabbed,
+.rl{
+    margin-right: 5px;
+}
+.qchyppb,
+.dyzxmSearch{
+    margin-left: -5px;   /*清除因为使用inline-block带来的盒子间空白缝隙*/
+}
+.tabbed,
+.qchyppb{
+   width:  530px;
+}
+.rl,
+.dyzxmSearch{
+    width: 350px;
+}
+.etc,
+.xm{
+    display: table;                  /*width:未知; margin:0 auto; 无法水平居中，用display:table; margin:0 auto;就好啦*/
+    margin:0 auto;
+}
+.etc{
+    margin-top: 10px;
+}
+
+
+/* tabbed */
+.tabbed input{
+    display: none;   /* input隐身 */
+}
+.tabbed table{
+    text-align: center;
+}
+.tabbed section h1{
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 5px;
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.h1_1 label{
+    margin-left: 20px;
+}
+
+.tabbed section h1 label{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 80px;
+    height: 25px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 0.25em 0.75em;
+    border-bottom: none;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.0625);
+    background: #EDEDEF;
+    cursor: pointer;
+     -moz-user-select: none;
+      -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.tabbed section div{
+    position: relative;
+    z-index: 1;
+    
+    float: right;
+    box-sizing: border-box;
+    width: 490px;
+    height: 250px;
+    margin: 34px 20px 0 -100%;
+    padding: 0.5em 0.75em;
+    
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.0625);
+    background: #fff;
+}
+.tabbed table{
+    border-collapse:collapse;
+    position: relative;
+    top: 20px;
+    margin:0 auto;
+    font-family: 黑体;
+}
+.tabbed td{
+    width:100px;
+    height: 30px;
+    border:1px solid #ccc;
+}
+.tabbed td:hover{
+    background:#ddd;
+}
+
+/* 选中的input对应的h1:堆叠层级为2 */
+.tabbed input:checked + section h1 label{
+    position: relative;
+    z-index: 2;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    background:#fff;
+}
+/* 未选中的input对应的div:直接删除 */
+.tabbed input:not(:checked) + section div{
+    display: none;
+}
+
+/* .dyzxmSearch */
+.dyzxmSearch label{
+    color:#C6C6C6;
+}
+.dyzxmSearch input[type='text'],
+.widget_search_3 textarea{
+    outline: none;   /*去掉chrome里input或者textarea在focus时的高亮outline*/
+    border:none;
+    height:2em;
+}
+.widget_search_1,
+.widget_search_2,
+.widget_search_3,
+.widget_search_4{
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 280px;
+    padding:0 10px;
+}
+.widget_search_1{
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.widget_search_2_l{
+    display: inline-block;
+}
+.widget_search_2_l input{
+    width: 30px;
+}
+.widget_search_2_r{
+    padding-left: 10px;
+    margin-right: -10px;
+    float: right;
+    border-left:1px solid #ddd;
+}
+.widget_search_3{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    height: 140px;
+}
+.widget_search_3 textarea{
+    resize: none;
+    width:20em;
+    height: 8em;
+}
+.widget_search_4{
+    margin-top: 10px;
+}
+.widget_search_4 label,
+.widget_search_4 input
+{
+    vertical-align: middle;
+}
+.widget_search_4 button{
+    float:right;
+}
+::-webkit-input-placeholder {
+   color: #000;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #000;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000;  
+}
+:-ms-input-placeholder {  
+   color: #000;  
+}
+/* rl */
+.rl_1{
+    font-size: 0px;/*去除inline-block带来的盒子间空白间隙*/
+    display: table;
+    margin:0 auto;
+}
+.rl_1 div{
+    position: relative;
+    padding:0 4px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.rl_1 div select{
+    font-size: 11px;
+}
+.year{
+    width: 74px;
+}
+.month{
+    width: 64px;
+}
+.day{
+    width: 84px;
+}
+.rl_1 i{
+    position: absolute;
+    right: 8px;
+    line-height: 26px;
+    z-index: 100;
+    color: #aaa;
+    pointer-events: none;
+}
+.rl_1 button{
+    height: 26px;
+    background: #fff;
+    border:1px solid #ccc;
+    font-size: 11px;
+    width: 64px;
+}
+.rl_1 button:hover{
+    cursor: pointer;
+    color: #fff;
+    background: #2189C0;
+}
+.rl_1 button:active{
+    color: #fff;
+    background: #2189C0;
+}
+.rl_2{
+    display: table;
+    margin:0 auto;
+}
+.rl_2 table{
+    width: 310px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border-top: 2px solid #A8CFEC;
+    text-align: center;
+/*     用户不选中文本，造成不必要的麻烦 */
+     -moz-user-select: none;
+      -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.rl_2 thead tr{
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+.rl_2 td{
+    box-sizing: border-box;
+    width:40px;
+    height: 40px;
+}
+.rl_2 tbody span:last-of-type,
+.rl_2 tbody span:first-of-type{
+    display: block;
+}
+.rl_2 tbody span:first-of-type{
+    line-height: 1;
+}
+.rl_2 td:empty{
+    visibility: hidden;
+}
+.rl_2 tbody td:hover{
+    border:1px solid orange;
+}
+.rl_2 tr > td:nth-child(n+6) > span:first-child,
+.jr{
+   color: #ee343A;
+}
+/* .qchyppb */
+.qchyppb_table{
+    margin:0 auto;
+    display: table;
+}
+.qchyppb table{
+    margin-top: 10px;
+    width: 450px;
+    border-collapse: collapse;
+}
+.qchyppb_table table td,
+.qchyppb_table table th{
+    border:1px solid #ddd;
+    height: 25px;
+}
+.qchyppb_table tr > td:first-child{
+    width:65px;
+    text-align: center;
+}
+.qchyppb_table tr > td:nth-child(2){
+    width: 90px;
+    text-align: center;
+}
+.qchyppb_table tr > td:last-child{
+    padding-left: 30px;
+}
+.qchyppb_table tr > th:last-child{
+    text-align: left;
+    padding-left: 30px;
+}
+.qchyppb_table tbody tr:hover{
+    cursor: pointer;
+    background: #F4F5F7;
+}
+.qchyppb_table tbody div,
+.qchyppb_table tbody tr>td:last-of-type span{
+    vertical-align: middle;
+}
+.dibu{
+    margin-left: 10px;
+    position: relative;
+    width: 168px;
+    height: 3px;
+    background: #ddd;
+    display: inline-block;
+}
+.dibu div{
+    height: 3px;
+    position: absolute;
+}
+.dz{
+    width: 140px;
+    background: #EE6E51;
+}
+.ad{
+    width: 100px;
+    background: #EF8150;
+}
+.ft{
+    width: 110px;
+    background: #EF8150;
+}
+.No4{
+    background: #7FCAF1;
+}
+.qy{
+    width: 50px;
+}
+.bc,
+.bk{
+    width: 40px;
+}
+.bt{
+    width: 90px;
+}
+.fute{
+    width: 80px;
+}
+.bm{
+    width: 70px;
+}
+.xd{
+    width: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
