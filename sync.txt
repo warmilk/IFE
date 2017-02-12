@@ -1,0 +1,6 @@
+
+
+F:/7.【代码】平时练习小想法/IFE
+
+
+browser-sync start --server --files "**/*.css, **/*.html"

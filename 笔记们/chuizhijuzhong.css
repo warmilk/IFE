@@ -1,0 +1,52 @@
+#wrapper {
+    display: table;
+}
+
+#cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+
+/*方法二*/
+#content2 {
+    position: absolute;
+    top: 50%;
+    height: 240px;
+    margin-top: -120px; /* negative half of the height */
+}
+
+
+/*方法三*/
+#floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -120px;
+}
+
+#content3 {
+    clear: both;
+    height: 240px;
+    position: relative;
+}
+
+
+/*方法四*/
+#content4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 240px;
+    width: 70%;
+}
+
+/*方法五*/
+#content5 {
+    height: 100px;
+    line-height: 100px;
+}

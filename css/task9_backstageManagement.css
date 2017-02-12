@@ -545,7 +545,7 @@ main main{
     position: relative;
     top: 20px;
     margin:0 auto;
-    font-family: 黑体;
+    font-family: '黑体';
 }
 .tabbed td{
     width:100px;

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--   
+    <li>第一名：福州（样例），10</li>
+    <li>第二名：福州（样例），10</li> -->
+  </ul>
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+(function () {
+
+
+
+
+
+  // 获取被修改对象
+   var oList=document.getElementById('aqi-list');
+
+   // 准备另一个要用到的填充数据
+   var aqiNo=['一','二','三','四','五','六'];
+
+   // 给aqiData从大到小排序
+   aqiData.sort(
+   	function(a,b){
+   		return b[1]-a[1];//传进来的参数a是aqiData[i],a[1]则是aqiDate[i][1],也就是二维数组的每一个子数组的第二个元素
+   	}
+   	);
+
+   // 清空oList的内容
+   oList.innerHTML='';
+
+   // 往oList里面填充内容
+   for (var i=0;i<aqiData.length;i++) {
+   		if (aqiData[i][1]>60) {
+
+   			// oList.innerHTML='<li>第'+aqiNo[i]+'名：'+aqiData[i][0]+'，'+aqiData[i][1]+'</li>';
+
+
+   			var oLi = document.createElement("li");
+   			oLi.innerHTML = '第'+aqiNo[i]+'名：'+aqiData[i][0]+','+aqiData[i][1];
+   			oList.appendChild(oLi);
+   		}
+   	
+   }
+
+
+  
+
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+body{
+  padding     : 1.5em;
+  background  : #f8f8f8;
+  font-family : sans-serif;
+  line-height : 1.5;
+}
+.tabbed{
+  float : left;
+  width : 100%;
+}
+
+
+
+
+
+
+/* input隐身 */
+.tabbed input{
+  display : none;
+}
+
+.tabbed section h1{
+  float       : left;
+  box-sizing  : border-box;
+  margin      : 0;
+  padding     : 0.5em 0.5em 0;
+  overflow    : hidden;
+  font-size   : 1em;
+  font-weight : normal;
+}
+
+.tabbed input:first-child + section h1{
+  padding-left : 1em;
+}
+
+.tabbed section h1 label{
+  display: block;
+  box-sizing: border-box;
+  width: 80px;
+  height: 25px;
+  padding                 : 0.25em 0.75em;
+  border                  : 1px solid #ddd;
+  border-bottom           : none;
+  border-top-left-radius  : 4px;
+  border-top-right-radius : 4px;
+  box-shadow              : 0 0 0.5em rgba(0,0,0,0.0625);
+  background              : #EDEDEF;
+  cursor                  : pointer;
+     -moz-user-select     : none;
+      -ms-user-select     : none;
+  -webkit-user-select     : none;
+}
+
+.tabbed section div{
+  position      : relative;
+  z-index       : 1;
+    
+  float         : right;
+  box-sizing    : border-box;
+  width: 490px;
+  height: 250px;
+  margin        : 2.5em 0 0 -100%;
+  padding       : 0.5em 0.75em;
+  
+  border        : 1px solid #ddd;
+  border-radius : 4px;
+  box-shadow    : 0 0 0.5em rgba(0,0,0,0.0625);
+  background    : #fff;
+}
+
+
+
+/* 选中的input对应的h1:堆叠层级为2 */
+.tabbed input:checked + section h1 label{
+  position : relative;
+  z-index  : 2;
+  background:#fff;
+}
+/* 未选中的input对应的div:直接删除 */
+.tabbed input:not(:checked) + section div{
+  display : none;
+}
+
+/*-----------------------------------------下拉菜单-------------------------------------------------------------*/
+.dropdown {
+    position: relative;
+
+    /** Make it fit tightly around it's children */
+    display: inline-block;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+
+    /**
+     * Set the top of the dropdown menu to be positioned 100%
+     * from the top of the container, and aligned to the left.
+     */
+    top: 100%;
+    left: 0;
+
+    /** Allow no empty space between this and .dropdown */
+    margin: 0;
+}
+
+
+/**
+ * Apply these styles to .dropdown-menu when user hovers
+ * over .dropdown
+ */
+.dropdown:hover .dropdown-menu {
+
+    /** Show dropdown menu */
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    margin: 0;
+
+    /****************
+     ** NEW STYLES **
+     ****************/
+
+    list-style: none; /** Remove list bullets */
+    width: 100%; /** Set the width to 100% of it's parent */
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/** Button Styles **/
+.dropdown button {
+    background: #FF6223;
+    color: #FFFFFF;
+    border: none;
+    margin: 0;
+    padding: 0.4em 0.8em;
+    font-size: 1em;
+}
+
+/** List Item Styles **/
+.dropdown a {
+    display: block;
+    padding: 0.2em 0.8em;
+    text-decoration: none;
+    background: #CCCCCC;
+    color: #333333;
+}
+
+/** List Item Hover Styles **/
+.dropdown a:hover {
+    background: #BBBBBB;
+}
+
+
+
+
+/*下拉菜单*/
+.select
+{
+    display: inline; 
+    float: left;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid #ccc;
+}
+.select div
+{
+    float: left; 
+
+    border: 1px solid #f9f9f9;
+}
+.select > div
+{
+    overflow: hidden;
+}
+* html .select div select
+{
+    display: block;
+    float: left;
+
+    margin: -2px;
+}
+.select div > select
+{
+    display: block;
+    float: none;
+
+    margin: -2px;
+    padding: 0;
+}
+.select:hover
+{
+    border: 1px solid #666;
+}
+
+
+
+.styled-select select {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
