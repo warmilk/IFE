@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,64 +6,93 @@
   </head>
 <body>
 
-  <h3>污染城市列表</h3>
-  <ul id="aqi-list">
-<!--   
-    <li>第一名：福州（样例），10</li>
-    <li>第二名：福州（样例），10</li> -->
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
   </ul>
+
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+
+  </ul>
+
+  <button id="sort-btn">排序</button>
 
 <script type="text/javascript">
 
-var aqiData = [
-  ["北京", 90],
-  ["上海", 50],
-  ["福州", 10],
-  ["广州", 50],
-  ["成都", 90],
-  ["西安", 100]
-];
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+	var oSource=document.getElementById('source');
+	var aSourceList=oSource.getElementsByTagName('li');
+	var aAqi=oSource.getElementsByTagName("b");
 
-(function () {
+	var data=[];
+
+	for (var i = aSourceList.length - 1; i >= 0; i--) {
+		data[i][0]=charAt(aSourceList[i].text());
+		data[i][1]=
+	}
+  /*
+  coding here
+  */
+
+  /*
+  data = [
+    ["北京", 90],
+    ["北京", 90]
+    ……
+  ]
+  */
+
+  return data;
+
+}
+
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+
+}
+
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+function render(data) {
+
+}
+
+function btnHandle() {
+  var aqiData = getData();
+  aqiData = sortAqiData(aqiData);
+  render(aqiData);
+}
 
 
+function init() {
 
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
 
+}
 
-  // 获取被修改对象
-   var oList=document.getElementById('aqi-list');
-
-   // 准备另一个要用到的填充数据
-   var aqiNo=['一','二','三','四','五','六'];
-
-   // 给aqiData从大到小排序
-   aqiData.sort(
-   	function(a,b){
-   		return b[1]-a[1];//传进来的参数a是aqiData[i],a[1]则是aqiDate[i][1],也就是二维数组的每一个子数组的第二个元素
-   	}
-   	);
-
-   // 清空oList的内容
-   oList.innerHTML='';
-
-   // 往oList里面填充内容
-   for (var i=0;i<aqiData.length;i++) {
-   		if (aqiData[i][1]>60) {
-
-   			// oList.innerHTML='<li>第'+aqiNo[i]+'名：'+aqiData[i][0]+'，'+aqiData[i][1]+'</li>';
-
-
-   			var oLi = document.createElement("li");
-   			oLi.innerHTML = '第'+aqiNo[i]+'名：'+aqiData[i][0]+','+aqiData[i][1];
-   			oList.appendChild(oLi);
-   		}
-   	
-   }
-
-
-  
-
-})();
+init();
 
 </script>
 </body>
