@@ -19,13 +19,15 @@ var aqiData = {};
  */
 function addAqiData() {
 	var sAqiCity=document.getElementById('aqi-city-input').value.trim();
-	var sAqiValue=document.getElementById('aqi-city-input').value.trim();
+	var sAqiValue=document.getElementById('aqi-value-input').value.trim();
 
-	if (sAqiCity.match(/^[A-Za-z\u4E00-\u9FA5]+$/)) {
+	if (!sAqiCity.match(/^[A-Za-z\u4E00-\u9FA5]+$/)) {
 		alert('城市名必须为中文字符');
+        return;
 	}
-	if (sAqiValue.match(/^\d+$/)) {
+	if (!sAqiValue.match(/^\d+$/)) {
 		alert('空气质量指数必须为整数');
+        return;
 	}
 
 
@@ -57,12 +59,13 @@ function renderAqiList() {
 
         var oTd2=document.createElement('td');
         oTd2.innerHTML=aqiData[sAqiCity];
+        oTr.appendChild(oTd2);
 
         var oTd3=document.createElement('td');
-        oTd3.innerHTML='<button id="delBtn">删除</button>';
+        oTd3.innerHTML='<button class="del-Btn">删除</button>';//这里只能用class不能用id
         oTr.appendChild(oTd3);
 
-        oTab.tBodies[0].appendChild(oTr);
+        oTab.appendChild(oTr);
 	}
 
 }
@@ -89,16 +92,13 @@ function addBtnHandle() {
  * 点击各个删除按钮的时候的处理逻辑
  * 获取哪个城市数据被删，删除数据，更新表格显示
  */
-function delBtnHandle() {
+function delBtnHandle(target) {
   // do sth.
-    var oBtn=document.getElementById('delBtn');
-    var oTab=document.getElementsByClassName('aqi-table');
+    var oTr=target.parentElement.parentElement;
+    var sCity=oTr.children[0].innerHTML;
+    delete aqiData[sCity];
 
-    oBtn.onclick=function () {
-        oTab.tBodies[0].removeChild(this.parentNode);
-    };
-
-  renderAqiList();
+    renderAqiList();
 }
 
 
@@ -115,9 +115,13 @@ function init() {
 
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
     var oTab=document.getElementById('aqi-table');
-    for(var i=0;i<oTab.tBodies[0].rows.length;i++){
-        oTab.tBodies[0].rows[i].cells[2].onclick=delBtnHandle;
-    }
+    var aDelBtn=document.getElementsByClassName('del-Btn');
+
+    oTab.addEventListener("click",function (e) {
+        if(e.target && e.target.nodeName === 'BUTTON'){
+            delBtnHandle(e.target);
+        }
+    })
 
 }
 
